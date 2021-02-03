@@ -1,0 +1,26 @@
+{
+  "name": "rpt26-mvp",
+  "version": "1.0.0",
+  "description": "## Technologies ## - React - Express - MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxmilpro/rpt26-mvp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxmilpro/rpt26-mvp/issues"
+  },
+  "homepage": "https://github.com/maxmilpro/rpt26-mvp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  }
+}
