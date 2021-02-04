@@ -6,21 +6,21 @@ const dbName = 'recipeBook';
 const client = new MongoClient(url);
 
 // get all ingredients from the db
-let get = async function() {
+exports.get = async function() {
   try {
     await client.connect();
 
     const database = client.db(dbName);
     const collection = database.collection('ingredients');
     const findResult = await collection.find();
-    await findResult.forEach(console.dir);
+    return await findResult.toArray();
   } finally {
     await client.close();
   }
 }
 
 // insert ingredient into the db
-let add = async function(ingredient) {
+exports.add = async function(ingredient) {
   try {
     await client.connect();
 

@@ -1,4 +1,4 @@
-const {client} = require('./db/connect');
+const db = require('./db/connect');
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path');
 const express = require('express');
@@ -8,24 +8,25 @@ const app = express();
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
-// create ingredient records
+// get ingredients
+app.get('/ingredients', function(req, res) {
+  db.get()
+  .then((result) => {
+    res.send(result);
+  })
+})
+
+// create ingredient
 app.post('/ingredients', function(req, res) {
-  console.log('adding an ingredient')
-  MongoClient.connect('mongodb://localhost:27017/recipeBook', function(err, db) {
-    if (err) throw err;
-    db.collection('ingredients', function(err, collection) {
-      collection.insert({name: 'chicken', category: 'protein'})
-    })
-    // db.ingredients.insertOne({
-    //   name: 'chicken',
-    //   category: 'protein'
-    // });
+  db.add({name: 'steak', category: 'protein'})
+  .then(() => {
+    res.end();
   })
 });
 
-// delete ingredient records
+// delete ingredient
 
-// update ingredient records
+// update ingredient
 
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
