@@ -1,4 +1,6 @@
-module.exports.ingredients = [
+import {hot} from "react-hot-loader";
+
+var sampleIngredients = [
   {
     "_id": "601caf506cdf41028b482030",
     "name": "steak",
@@ -21,3 +23,5 @@ module.exports.ingredients = [
     "meal": "lunch"
   }
 ];
+
+export default hot(module)(sampleIngredients);

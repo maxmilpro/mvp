@@ -5,17 +5,17 @@ function Submit(props) {
   return (
     <form>
       <div>
-        <label for="ingredient">Enter an ingredient: </label>
+        <label htmlFor="ingredient">Enter an ingredient: </label>
         <input type="text" name="ingredient" id="ingredient"></input>
       </div>
       <div>
-        <label for="quantity">Enter a quantity: </label>
+        <label htmlFor="quantity">Enter a quantity: </label>
         <input type="text" name="quantity" id="quantity"></input>
       </div>
       <div>
-        <label for="categories">Select a category: </label>
+        <label htmlFor="categories">Select a category: </label>
         <select name="categories" id="categories">
-          <option value="">--Please choose an option--</option>
+          <option value="">Please choose an option</option>
           <option value="protein">protein</option>
           <option value="grains">grains</option>
           <option value="vegetables">vegetables</option>
