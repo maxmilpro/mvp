@@ -26,7 +26,7 @@ exports.add = async function(ingredient) {
 
     const database = client.db(dbName);
     const collection = database.collection('ingredients');
-    const doc = { name: ingredient.name, category: ingredient.category};
+    const doc = { name: ingredient.name, quantity: ingredient.quantity, category: ingredient.category, meal: ingredient.meal};
     const result = await collection.insertOne(doc);
 
     console.log(

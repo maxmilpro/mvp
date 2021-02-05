@@ -1,11 +1,13 @@
 const db = require('./db/connect');
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path');
+const cors = require('cors');
 const express = require('express');
 const port = 3000;
 
 const app = express();
 
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'dist')));
 

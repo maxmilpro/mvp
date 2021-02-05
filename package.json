@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/maxmilpro/rpt26-mvp#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jquery": "^3.5.1",
     "mongodb": "^3.6.4",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
