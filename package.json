@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
     "initdb": "mongo db/init.js",
-    "client": "webpack-dev-server --mode development"
+    "client": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,8 @@
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-hot-loader": "^4.3.11"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
