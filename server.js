@@ -16,6 +16,9 @@ app.get('/ingredients', function(req, res) {
   .then((result) => {
     res.send(result);
   })
+  .catch(err => {
+    console.log(err);
+  })
 })
 
 // create ingredient
@@ -23,6 +26,9 @@ app.post('/ingredients', function(req, res) {
   db.add({name: 'steak', category: 'protein'})
   .then(() => {
     res.end();
+  })
+  .catch((err) => {
+    console.log(err);
   })
 });
 

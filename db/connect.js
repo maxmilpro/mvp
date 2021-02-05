@@ -15,7 +15,7 @@ exports.get = async function() {
     const findResult = await collection.find();
     return await findResult.toArray();
   } finally {
-    await client.close();
+    // await client.close();
   }
 }
 
@@ -33,7 +33,7 @@ exports.add = async function(ingredient) {
       `${result.insertedCount} documents were inserted with the _id: ${result.insertedId}`
     );
   } finally {
-    await client.close();
+    // await client.close();
   }
 }
 
