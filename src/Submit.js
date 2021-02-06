@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader";
 
-function Submit(props) {
+function Submit({handleSubmit}) {
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="ingredient">Enter an ingredient: </label>
         <input type="text" name="ingredient" id="ingredient"></input>
@@ -20,7 +20,16 @@ function Submit(props) {
           <option value="grains">grains</option>
           <option value="vegetables">vegetables</option>
           <option value="fruit">fruit</option>
-          <option value="dairu">dairy</option>
+          <option value="dairy">dairy</option>
+        </select>
+      </div>
+      <div>
+        <label htmlFor="meal">Select a meal: </label>
+        <select name="meal" id="meal">
+          <option value="">Please choose an option</option>
+          <option value="breakfast">breakfast</option>
+          <option value="lunch">lunch</option>
+          <option value="dinner">dinner</option>
         </select>
       </div>
       <div>

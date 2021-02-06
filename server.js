@@ -8,6 +8,7 @@ const port = 3000;
 const app = express();
 
 app.use(cors());
+app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -25,7 +26,7 @@ app.get('/ingredients', function(req, res) {
 
 // create ingredient
 app.post('/ingredients', function(req, res) {
-  db.add({name: 'steak', category: 'protein'})
+  db.add(req.body)
   .then(() => {
     res.end();
   })
