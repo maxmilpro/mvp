@@ -1,5 +1,5 @@
 body {
-  background-color: #eff7e1;
+  background-image: url("https://previews.123rf.com/images/belchonock/belchonock1502/belchonock150206489/36694281-spices-with-recipe-book-on-rustic-wooden-table-background.jpg");
 }
 
 #hidden {
@@ -36,11 +36,16 @@ form {
   border-radius: 25px;
   background-color: #214151;
   color: #eff7e1;
+  text-align: center;
 }
 
 h1 {
   margin: auto;
   width: 50%;
   padding: 10px;
+  border-radius: 25px;
+  background-color: #214151;
+  color: #eff7e1;
+  text-align: center;
   font-family: 'Courier New', monospace;
 }
