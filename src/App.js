@@ -3,6 +3,9 @@ import {hot} from "react-hot-loader";
 import Ingredients from "./Ingredients.js";
 import Submit from "./Submit.js";
 import {getIngredients, addIngredient, deleteIngredient} from "./requests.js";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -57,7 +60,7 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App">
+      <div class="App">
         <h1>Recipebook</h1>
         <div><Submit handleSubmit={this.handleSubmit}/></div>
         <div><Ingredients ingredients={this.state.ingredients} handleDelete={this.handleDelete}/></div>

@@ -1,0 +1,46 @@
+body {
+  background-color: #eff7e1;
+}
+
+#hidden {
+  list-style-type: none;
+  display: none;
+}
+
+.App {
+
+}
+
+.ingredients {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+
+}
+
+.ingredient {
+  border-radius: 25px;
+  padding: 20px;
+  width: 400px;
+  height: 175px;
+  margin: 35px;
+  display: inline-block;
+  background-color: #a2d0c1;
+  color: #214151;
+}
+
+form {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #214151;
+  color: #eff7e1;
+}
+
+h1 {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+}

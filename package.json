@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/maxmilpro/rpt26-mvp#readme",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
@@ -30,6 +31,7 @@
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "react": "^16.5.2",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11"
   },
