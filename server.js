@@ -36,8 +36,8 @@ app.post('/ingredients', function(req, res) {
 });
 
 // delete ingredient
-app.delete('/ingredients', function(req, res) {
-  db.delete({id: '601e1310615fa128d448d4e6'})
+app.post('/removeingredient', function(req, res) {
+  db.delete(req.body)
   .then(() => {
     res.end();
   })

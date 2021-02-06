@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {hot} from "react-hot-loader";
 import Ingredients from "./Ingredients.js";
 import Submit from "./Submit.js";
-import {getIngredients, addIngredient} from "./requests.js";
+import {getIngredients, addIngredient, deleteIngredient} from "./requests.js";
 
 class App extends Component {
   constructor(props) {
@@ -12,6 +12,7 @@ class App extends Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -40,12 +41,26 @@ class App extends Component {
     });
   }
 
+  handleDelete(event) {
+    event.preventDefault();
+    console.dir(event.target.parentElement.children[4].innerHTML.split(" ")[1]);
+    var id = event.target.parentElement.children[4].innerHTML.split(" ")[1];
+    deleteIngredient({id: id}, () => {
+      console.log('Deleted the record')
+      getIngredients((data) => {
+        this.setState({
+          ingredients: data
+        })
+      });
+    });
+  }
+
   render(){
     return (
       <div className="App">
         <h1>Recipebook</h1>
         <div><Submit handleSubmit={this.handleSubmit}/></div>
-        <div><Ingredients ingredients={this.state.ingredients}/></div>
+        <div><Ingredients ingredients={this.state.ingredients} handleDelete={this.handleDelete}/></div>
       </div>
     );
   }
