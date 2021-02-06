@@ -6,15 +6,15 @@ function Submit({handleSubmit}) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="ingredient">Enter an ingredient: </label>
+        <label htmlFor="ingredient">Ingredient: </label>
         <input type="text" name="ingredient" id="ingredient"></input>
       </div>
       <div>
-        <label htmlFor="quantity">Enter a quantity: </label>
+        <label htmlFor="quantity">Quantity: </label>
         <input type="text" name="quantity" id="quantity"></input>
       </div>
       <div>
-        <label htmlFor="categories">Select a category: </label>
+        <label htmlFor="categories">Category: </label>
         <select name="categories" id="categories">
           <option value="">Please choose an option</option>
           <option value="protein">protein</option>
@@ -25,7 +25,7 @@ function Submit({handleSubmit}) {
         </select>
       </div>
       <div>
-        <label htmlFor="meal">Select a meal: </label>
+        <label htmlFor="meal">Meal: </label>
         <select name="meal" id="meal">
           <option value="">Please choose an option</option>
           <option value="breakfast">breakfast</option>
