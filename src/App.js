@@ -32,11 +32,11 @@ class App extends Component {
     }
     addIngredient(newIngredient, () => {
       console.log('Sent a new ingredient to the server!')
-    });
-    getIngredients((data) => {
-      this.setState({
-        ingredients: data
-      })
+      getIngredients((data) => {
+        this.setState({
+          ingredients: data
+        })
+      });
     });
   }
 
