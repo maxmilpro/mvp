@@ -4,11 +4,11 @@
   "description": "## Technologies ## - React - Express - MongoDB",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
     "initdb": "mongo db/init.js",
-    "client": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "server-dev": "nodemon server.js",
+    "react-dev": "webpack --watch --mode development",
+    "build": "webpack --mode production",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
