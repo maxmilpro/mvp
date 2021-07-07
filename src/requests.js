@@ -1,6 +1,6 @@
 import * as $ from "jquery";
 
-const url = 'http://localhost:3000/ingredients/';
+const url = 'http://localhost:3001/ingredients/';
 
 var getIngredients = function(cb) {
   $.get(url, cb);
@@ -11,7 +11,7 @@ var addIngredient = function(ingredient, cb) {
 }
 
 var deleteIngredient = function(ingredient, cb) {
-  $.post('http://localhost:3000/removeingredient/', ingredient, cb);
+  $.post('http://localhost:3001/removeingredient/', ingredient, cb);
 }
 
 export {getIngredients, addIngredient, deleteIngredient};
